@@ -1,0 +1,38 @@
+<!-- transition-timing-function: ease default 逐渐变慢 ease-in 加速ease-out 减速ease-in-out加速然后减速 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+  window.onload = function(){
+    var box = document.getElementById("box");
+    // box.style.opacity = 1;
+    box.addEventListener("mouseover",function(){
+      this.style.opacity = 1;
+      this.style.backgroundColor = "black";
+      // 淡入
+    });
+    box.addEventListener("mouseout",function(){
+      this.style.opacity = 0.5;
+      this.style.backgroundColor = "red";
+      // 淡出
+    })
+  }
+  </script>
+  <style>
+   .box{
+     width: 100px;
+     height: 100px;
+     background-color: red;
+     opacity: 0.5;
+     transition: opacity 3s,  background-color 1s;
+     /* 监控opacity property */
+   }
+  </style>
+</head>
+<body>
+  <div class="box" id="box"></div>
+</body>
+</html>

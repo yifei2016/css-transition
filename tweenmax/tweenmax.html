@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+  <title>Document</title>
+  <style>
+  #apple{
+    background-color: #88ce02;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  /* transform: translate(-10%, -10%); */
+  z-index: 1;
+  }
+  </style>
+  </head>
+  
+  <body>
+    <div id="apple">i love apple</div>
+  </body>
+  <script>
+    let apple = document.getElementById("apple");
+    TweenLite.set(apple, { rotation: 20});//initial state
+    TweenLite.to(apple, 2, { ease: Bounce.easeOut, y: 170, rotation: 0});//from staggerto 
+    apple.innerHTML = "i love pear"
+    document.write(Date());
+  </script>
+  
+  </html>
